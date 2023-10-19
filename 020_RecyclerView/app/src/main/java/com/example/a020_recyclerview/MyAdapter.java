@@ -1,5 +1,6 @@
 package com.example.a020_recyclerview;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -16,21 +17,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyAdapter(List<String> list) {
         nameList = list;
     }
-    
+
     @NonNull
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.elemento, parent, false);
+        MyViewHolder myViewHolder = new MyViewHolder(view);
+        return myViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
-
+        final String name = nameList.get(position);
+        holder.textView.setText(name);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        if(nameList == null) return 0;
+        return nameList.size();
     }
 
     // clase INTERNA para manipular elemento.xml
