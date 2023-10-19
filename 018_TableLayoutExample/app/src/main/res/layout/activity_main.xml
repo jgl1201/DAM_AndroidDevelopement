@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="*">
+
+    <TextView
+        android:id="@+id/textViewTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="019_TableLayout"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="30sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewA1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A1"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B1"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewC1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C1"
+            android:textAlignment="center"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A2"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B2"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewC2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C2"
+            android:textAlignment="center"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewA3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A3"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B3"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/textViewC3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C3"
+            android:textAlignment="center"/>
+    </TableRow>
+
+</TableLayout>
