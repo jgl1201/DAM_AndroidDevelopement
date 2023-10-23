@@ -12,5 +12,13 @@
         android:textAlignment="center"
         android:textColor="#009688"
         android:textSize="30dp" />
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detail"
+        android:textAlignment="center"
+        android:textColor="#FF00FF"
+        android:textSize="24dp" />
 
 </LinearLayout>

@@ -17,15 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // very poor data management
-        List<String> list = new ArrayList<>();
-        list.add("China");
+        List<Country> list = Country.fillArray();
+ /*       list.add("China");
         list.add("France");
         list.add("Germany");
         list.add("India");
         list.add("Russia");
         list.add("UK");
         list.add("US");
-
+*/
         // data management end
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

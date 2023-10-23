@@ -13,8 +13,8 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private List<String> nameList;
-    public MyAdapter(List<String> list) {
+    private List<Country> nameList;
+    public MyAdapter(List<Country> list) {
         nameList = list;
     }
 
@@ -29,8 +29,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
-        final String name = nameList.get(position);
-        holder.textView.setText(name);
+        final Country country = nameList.get(position);
+        holder.country.setText(country.getName());
+        holder.details.setText(country.getDetail());
     }
 
     @Override
@@ -41,11 +42,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     // clase INTERNA para manipular elemento.xml
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView textView;
+        public TextView country;
+        public TextView details;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.texto);
+            country = itemView.findViewById(R.id.texto);
+            details = itemView.findViewById(R.id.details);
         }
     }
 }
