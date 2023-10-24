@@ -38,6 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickDelete(View view) {
-        
+        // TODO delete last element from View
     }
 }
