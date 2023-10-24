@@ -23,7 +23,7 @@
             android:textSize="35dp"
             />
         <TextView
-            android:id="@+id/detalle"
+            android:id="@+id/details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="detalle del texto escrito mas arriba"
