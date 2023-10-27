@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Country> list = Country.fillArray(getApplicationContext());
+        List<Country> list = Country.fillArray();
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -30,14 +30,12 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
 
         recyclerView.setLayoutManager(linearLayoutManager);
-        MyAdapter miAdaptador = new MyAdapter(list);
-        recyclerView.setAdapter(miAdaptador);
+        MyAdapter myAdapter = new MyAdapter(list);
+        recyclerView.setAdapter(myAdapter);
 
         myButton01 = findViewById(R.id.button);
-        myButton01.setOnClickListener(view -> onClickDelete(view));
+        // No need to make an onCLick() cause there's a method on MyAdapter
+        myButton01.setOnClickListener(view -> myAdapter.add());
     }
 
-    public void onClickDelete(View view) {
-        // TODO delete last element from View
-    }
 }

@@ -28,14 +28,12 @@ public class Country {
         return image;
     }
 
-    public static List<Country> fillArray(Context applicationContext) {
+    public static List<Country> fillArray() {
         List<Country> list = new ArrayList<>();
 
         for (int i = 0; i <= 16; i++) {
-            String name = "avatar_" + i + ".xml";
-            Country country = new Country("Pais " + i, "Detalles " + i,
-                    applicationContext.getResources().getIdentifier(name, "drawable", applicationContext.getPackageName()));
-            list.add(country);
+            int avatar = R.drawable.avatar_1;
+            Country country = new Country("Pais " + i, "Detail " + i, avatar + i);
         }
 
         return list;
