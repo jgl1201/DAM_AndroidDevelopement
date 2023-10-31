@@ -86,4 +86,16 @@
             android:text="COIA FC" />
     </RadioGroup>
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Te gusta er furboh?"
+        app:layout_constraintBottom_toTopOf="@+id/RadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAnswer"
+        app:layout_constraintVertical_bias="0.594" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

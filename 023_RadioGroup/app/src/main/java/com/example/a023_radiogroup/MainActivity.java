@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,
+CompoundButton.OnCheckedChangeListener{
 
     RadioGroup radioGroup;
+    CheckBox checkBox;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -20,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
         radioGroup = findViewById(R.id.RadioGroup);
         radioGroup.setOnCheckedChangeListener((radioGroup1, i) -> onCheckedChanged(radioGroup1, i));
+
+        checkBox = findViewById(R.id.checkBox);
+        checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> onCheckedChanged(buttonView, isChecked));
     }
 
     @Override
@@ -35,5 +42,14 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             textViewAnswer.setText("Rapido de Bouzas, lentos de pelotas");
         else if (i == R.id.Button4 )
             textViewAnswer.setText("Coia me chupa la poia");
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        TextView textView = findViewById(R.id.textViewAnswer);
+        if (b)
+            textView.setText("TE GUSTA ER FURBOH");
+        else
+            textView.setText("PASAS DE TEBAS");
     }
 }
