@@ -10,38 +10,44 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="024_Toggle&Switch"
+        android:text="024_Toggle y Switch"
         android:textColor="#009688"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.048" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ToggleButton"
+        android:text="SEXO"
+        android:textOff="MULLER"
+        android:textOn="HOME"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <Switch
         android:id="@+id/switch2"
-        android:layout_width="215dp"
-        android:layout_height="45dp"
-        android:text="Switch"
+        android:layout_width="279dp"
+        android:layout_height="86dp"
+        android:text="BIGOTE"
+        android:checked="true"
+        android:textOff="SIN BIGOTE"
+        android:textOn="CON BIGOTE"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toggleButton"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -49,8 +55,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch2"
+        app:layout_constraintVertical_bias="0.267"
         tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
