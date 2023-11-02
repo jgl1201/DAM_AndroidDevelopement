@@ -11,6 +11,8 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity implements CalendarView.OnDateChangeListener {
 
     CalendarView calendarView;
@@ -41,6 +43,20 @@ public class MainActivity extends AppCompatActivity implements CalendarView.OnDa
 
     public void onClick() {
         editTextDate = findViewById(R.id.editTextDate);
-        String date = editTextDate.getText().toString();
+        textViewDate = findViewById(R.id.textViewDate);
+
+        String[] parts = editTextDate.getText().toString().split("/");
+        int year = Integer.parseInt(parts[0]);
+        int month = Integer.parseInt(parts[1]);
+        int day = Integer.parseInt(parts[2]);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, (month-1));
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+
+        long timeMillis = calendar.getTimeInMillis();
+        calendarView.setDate(timeMillis, true, true);
+        textViewDate.setText(editTextDate.getText().toString());
     }
 }
