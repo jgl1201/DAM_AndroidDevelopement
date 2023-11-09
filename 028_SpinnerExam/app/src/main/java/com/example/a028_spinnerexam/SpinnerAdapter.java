@@ -12,12 +12,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.List;
+
 public class SpinnerAdapter extends ArrayAdapter<Team> {
 
     LayoutInflater layoutInflater;
 
-    public SpinnerAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public SpinnerAdapter(@NonNull Context context, int resource, List<Team> objects) {
+        super(context, resource, objects);
         layoutInflater = LayoutInflater.from(context);
     }
 
@@ -25,6 +27,16 @@ public class SpinnerAdapter extends ArrayAdapter<Team> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        return fillView(position, convertView, parent);
+    }
+
+    @NonNull
+    @Override
+    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        return fillView(position, convertView, parent);
+    }
+
+    public View fillView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.item, parent, false);
         Team team = getItem(position);
 
@@ -49,37 +61,6 @@ public class SpinnerAdapter extends ArrayAdapter<Team> {
         year.setText(team.getYear());
 
         return view;
-    }
-
-    @NonNull
-    @Override
-    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.item, null, true);
-            Team team = getItem(position);
-
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView imageView =
-                    (ImageView) convertView.findViewById(R.id.imageViewLogo);
-            imageView.setImageResource(team.getImg());
-
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView name =
-                    (TextView) convertView.findViewById(R.id.name);
-            name.setText(team.getName());
-
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView city =
-                    (TextView) convertView.findViewById(R.id.city);
-            city.setText(team.getCity());
-
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView country =
-                    (TextView) convertView.findViewById(R.id.country);
-            country.setText(team.getCountry());
-
-            @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView year =
-                    (TextView) convertView.findViewById(R.id.year);
-            year.setText(team.getYear());
-        }
-
-        return convertView;
     }
 
 }
