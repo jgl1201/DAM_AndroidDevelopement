@@ -14,8 +14,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner spinner;
-    TextView textViewName;
-    ImageView imageViewLogo;
     ArrayList<Team> list;
 
     @Override
@@ -26,18 +24,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner = findViewById(R.id.spinner);
         list = (ArrayList<Team>) Team.createTeam();
 
-        spinner.setAdapter(new SpinnerAdapter(getApplicationContext(), R.layout.item, list));
+        spinner.setAdapter(new SpinnerAdapter(getApplicationContext(), R.layout.elemento, list));
         spinner.setOnItemSelectedListener(this);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
-        textViewName = findViewById(R.id.textViewName);
-        imageViewLogo = findViewById(R.id.imageViewLogo);
+        TextView textViewName = findViewById(R.id.textViewName);
+        ImageView imageViewLogo = findViewById(R.id.imageViewLogo);
 
         Team team = (Team) parent.getItemAtPosition(position);
-        textViewName.setText(team.getName().toString());
-        imageViewLogo.setImageResource(team.getImg());
+         textViewName.setText(team.getName().toString());
+         imageViewLogo.setImageResource(team.getImg());
     }
 
     @Override

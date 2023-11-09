@@ -51,7 +51,7 @@ public class Team {
     }
 
     public static final String[] NAME = {
-            "Košarkaški Klub Crvena Zvezda", "Maccabi Basketball Club", "Basketball Club Žalgiris",
+            "KK Crvena Zvezda", "Maccabi Basketball Club", "Basketball Club Žalgiris",
             "Club Deportivo Baskonia", "PanathinaikosBasketball Club"};
 
     public static final String[] CITY = {

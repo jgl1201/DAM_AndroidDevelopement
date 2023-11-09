@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">0.29_Internacional</string>
+    <string name="welcome">Bienvenido al formulario de registro!</string>
+    <string name="uno">Nombre</string>
+    <string name="dos">Apellidos</string>
+    <string name="tres">Email</string>
+    <string name="cuatro">Clave</string>
+</resources>
