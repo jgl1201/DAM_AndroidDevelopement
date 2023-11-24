@@ -1,0 +1,81 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.a035_submenu.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuItem1"
+        android:icon="@android:drawable/btn_dialog"
+        android:orderInCategory="101"
+        android:title="@string/item_1" >
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <item
+                android:id="@+id/menuItem1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/item1_1" />
+            <item
+                android:id="@+id/menuItem1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/item1_2" />
+            <item
+                android:id="@+id/menuItem1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/item1_3" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menuItem2"
+        android:icon="@android:drawable/ic_media_ff"
+        android:orderInCategory="102"
+        android:title="@string/item_2" >
+        <menu
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <item
+                android:id="@+id/menuItem2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/item2_1" />
+            <item
+                android:id="@+id/menuItem2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="@string/item2_2" />
+        </menu>
+    </item>
+    <group android:orderInCategory="103" >
+        <item
+            android:id="@+id/Group1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/group1_1" />
+        <item
+            android:id="@+id/Group1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/group1_2" />
+        <item
+            android:id="@+id/search"
+            android:icon="@android:drawable/ic_menu_search"
+            app:actionViewClass="android.widget.SearchView"
+            app:showAsAction="ifRoom"
+            android:title="@string/search" />
+        <item
+            android:id="@+id/app_bar_switch"
+            android:title="switch"
+            app:actionLayout="@layout/switch_item"
+            app:showAsAction="always|withText" />
+
+
+
+    </group>
+</menu>
