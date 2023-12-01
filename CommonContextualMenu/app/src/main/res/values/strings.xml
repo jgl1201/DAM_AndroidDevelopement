@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fotos en Japón</string>
+    <string name="delete">Eliminar</string>
+    <string name="tag">Etiquetar</string>
+    <string name="move">Mover a</string>
+    <string name="size">Calcular tamaño</string>
+    <string name="photo_desc">Ítem con foto</string>
+</resources>
