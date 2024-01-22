@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">049_MyDisks</string>
+    <string name="borrar">Borrar</string>
+    <string name="añadir">Anadir</string>
+    <string name="disco">Titulo del disco</string>
+    <string name="Grupo">Grupo</string>
+</resources>
