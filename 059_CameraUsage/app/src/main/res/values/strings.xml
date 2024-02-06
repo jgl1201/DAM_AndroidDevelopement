@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">059_CameraUsage</string>
+    <string name="hello_world">Hello world</string>
+    <string name="action_settings">Settings</string>
+    <string name="thumbnailButton">Hacer foto</string>
+    <string name="thumbnailText">Y obtener thumbnail...</string>
+    <string name="guardarFoto">Hacer foto</string>
+    <string name="guardarFotoText">Y guardarla en su tamano real</string>
+</resources>
